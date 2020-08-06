@@ -1,0 +1,13 @@
+General workflow:
+1) Generate PSSMs from fastas
+    using runJACKHMMERForFolderOfFastas.sh
+    runJACKHMMERForFolderOfFastas.sh <fastaFolderName> <pssmOutFolder> <rgnDatabase> <timesToGenerate.txt>
+2) Generate tfRecord (python2):
+    a) convert_to_proteinnet_bulk.py <fastaDirectory> <pssmsDirectory> #will output the proteinnet files into the pssm directory
+    b) convert_to_tfrecord_bulk_v2.py <proteinnetoutputdirectory> <tfRecordsOutputDirectory>
+3) Copy tfRecords to the data testing folders
+4) Run protling.py w/ python2
+5) Transfer tertiary output files to fourarms
+6) Run R script to convert tertiary to backbone pdb file
+7) Run PULCHRA to transform backbone pdb to full atom pdb
+

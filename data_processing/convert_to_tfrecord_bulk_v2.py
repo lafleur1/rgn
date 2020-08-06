@@ -1,4 +1,4 @@
-=#!/usr/bin/python
+#NOTE: is a ptyhon 2.7 secript
 
 # imports
 import sys
@@ -127,11 +127,13 @@ def runOne(input_path, output_path, num_evo_entries = 42):
 
 # main. accepts three command-line arguments: input file, output file, and the number of entries in evo profiles
 if __name__ == '__main__':
+    print ("NOTE: a python 2.7 script.  Input processing will not work correclty with python 3.")
+
     #input_path      = sys.argv[1]
     #output_path     = sys.argv[2]
     #num_evo_entries = int(sys.argv[3]) if len(sys.argv) == 4 else 20 # default number of evo entries
-    inputsDir = "../pssms/"  # sys.argv[1] #directory with proteinnet records
-    outputsDir = "../tfRecordsV2/"  # sys.argv[2] #directory to put tfrecords
+    inputsDir = sys.argv[1] #"../pssms/"  # sys.argv[1] #directory with proteinnet records
+    outputsDir = sys.argv[2] #"../tfRecordsV2/"  # sys.argv[2] #directory to put tfrecords
     # for each proteinnet in the folder, process and output a tfrecord
     for file in os.listdir(inputsDir):
         if '.proteinnet' in file:
