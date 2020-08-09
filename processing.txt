@@ -10,4 +10,5 @@ General workflow:
 5) Transfer tertiary output files to fourarms
 6) Run R script to convert tertiary to backbone pdb file
 7) Run PULCHRA to transform backbone pdb to full atom pdb
+8) Run PyRosetta fastrelax &/or other protocol to get final structure
 
